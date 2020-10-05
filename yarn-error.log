@@ -1,0 +1,95 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add notification-widget
+
+PATH: 
+  C:\Users\shanmugaraja\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\shanmugaraja\bin;C:\Python38\Scripts;C:\Python38;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\xampp\php;C:\Program Files\Git\cmd;C:\Program Files\PuTTY;C:\Program Files (x86)\Yarn\bin;C:\composer;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\shanmugaraja\AppData\Local\Microsoft\WindowsApps;C:\Users\shanmugaraja\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\shanmugaraja\AppData\Roaming\Composer\vendor\bin;C:\Users\shanmugaraja\AppData\Local\Yarn\bin;C:\Program Files\heroku\bin;C:\Users\shanmugaraja\.deno\bin;C:\Program Files\deno\bin;C:\Users\shanmugaraja\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.17.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npmjs.org/notification-widget: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66096:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140748:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141720:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141642:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (_stream_readable.js:1221:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+npm manifest: 
+  {
+    "name": "notification-widget",
+    "version": "1.0.0",
+    "description": "Made with create-react-library",
+    "author": "sukanta-m",
+    "license": "MIT",
+    "repository": "sukanta-m/notification-widget",
+    "main": "dist/index.js",
+    "module": "dist/index.modern.js",
+    "source": "src/index.js",
+    "engines": {
+      "node": ">=10"
+    },
+    "scripts": {
+      "build": "microbundle-crl --no-compress --format modern,cjs",
+      "start": "microbundle-crl watch --no-compress --format modern,cjs",
+      "prepare": "run-s build",
+      "test": "run-s test:unit test:lint test:build",
+      "test:build": "run-s build",
+      "test:lint": "eslint .",
+      "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
+      "test:watch": "react-scripts test --env=jsdom",
+      "predeploy": "cd example && npm install && npm run build",
+      "deploy": "gh-pages -d example/build",
+      "start:example": "cd example && npm start"
+    },
+    "peerDependencies": {
+      "react": "^16.0.0"
+    },
+    "devDependencies": {
+      "microbundle-crl": "^0.13.10",
+      "babel-eslint": "^10.0.3",
+      "cross-env": "^7.0.2",
+      "eslint": "^6.8.0",
+      "eslint-config-prettier": "^6.7.0",
+      "eslint-config-standard": "^14.1.0",
+      "eslint-config-standard-react": "^9.2.0",
+      "eslint-plugin-import": "^2.18.2",
+      "eslint-plugin-node": "^11.0.0",
+      "eslint-plugin-prettier": "^3.1.1",
+      "eslint-plugin-promise": "^4.2.1",
+      "eslint-plugin-react": "^7.17.0",
+      "eslint-plugin-standard": "^4.0.1",
+      "gh-pages": "^2.2.0",
+      "npm-run-all": "^4.1.5",
+      "prettier": "^2.0.4",
+      "react": "^16.13.1",
+      "react-dom": "^16.13.1",
+      "react-scripts": "^3.4.1"
+    },
+    "files": [
+      "dist"
+    ],
+    "dependencies": {
+      "@babel/runtime": "^7.11.2",
+      "babel-loader": "^8.1.0",
+      "prop-types": "^15.7.2",
+      "styled-components": "^5.2.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
